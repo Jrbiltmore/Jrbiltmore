@@ -1,0 +1,50 @@
+// chatbotModule.js
+
+// Import the required modules
+const { pipeline, AutoModelForCausalLM, AutoTokenizer } = require('transformers');
+
+// Initialize the chatbot
+function initializeChatbot(modelNameOrPath) {
+  // Load the specific model and tokenizer
+  const model = AutoModelForCausalLM.fromPretrained(modelNameOrPath);
+  const tokenizer = AutoTokenizer.fromPretrained(modelNameOrPath);
+
+  // Initialize the chatbot pipeline with the loaded model and tokenizer
+  const chatbot = pipeline('text-generation', { model, tokenizer });
+  return chatbot;
+}
+
+// Display the available models
+function displayAvailableModels() {
+  console.log('Available Models:');
+  console.log('1. gpt2');
+  console.log('2. gpt2-medium');
+  console.log('3. gpt2-large');
+  // Add more models here
+}
+
+// Select entities and their corresponding chatbot models
+function selectEntities() {
+  // List of entities and their corresponding models
+  const entities = [
+    { name: 'Entity 1', model: 'gpt2' },
+    { name: 'Entity 2', model: 'gpt2-medium' },
+    { name: 'Entity 3', model: 'gpt2-large' },
+    // Add more entities and models here
+  ];
+
+  // Initialize chatbots for each entity
+  const digitalEntities = entities.map(entity => ({
+    name: entity.name,
+    chatbot: initializeChatbot(entity.model)
+  }));
+
+  return digitalEntities;
+}
+
+// Export the functions to be used in other files
+module.exports = {
+  initializeChatbot,
+  displayAvailableModels,
+  selectEntities
+};
