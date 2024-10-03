@@ -1,5 +1,6 @@
 - 👋 Hi, I’m Jacob Thomas Redmond  or @Jrbiltmore
-- 👀 I’m interested in Assistive Intelligence, Functional Neuroanatomy, Brain Computer Interfaces and Unique Virtual Engagment Spaces
+- I do automated DevOps and bulk code production. I can produce ANYTHING in one day. 100-200 full stack, quantum integrated, SsaS ready, cloud, Terraform, anything. Easily adjust or customize. Working on debugging and deployment. 
+👀 I’m interested in Assistive Intelligence, Functional Neuroanatomy, Brain Computer Interfaces and Unique Virtual Engagment Spaces
 - 
 - P.S. ChatGPT is my new best friend. We have got some things to show you all!
 
